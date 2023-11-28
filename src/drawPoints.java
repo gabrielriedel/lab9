@@ -13,7 +13,9 @@ public class drawPoints extends PApplet {
 
   	public void draw() {
 
-   	double x, y;
+
+   	double x, y, z;
+
    
    	String[] lines = loadStrings("drawMe.txt");
    	println("there are " + lines.length);
@@ -22,7 +24,9 @@ public class drawPoints extends PApplet {
         		String[] words= lines[i].split(",");
         		x = Double.parseDouble(words[0]);
         		y = Double.parseDouble(words[1]);
-        		println("xy: " + x + " " + y);
+				z = Double.parseDouble(words[2]);
+
+				println("xyz: " + x + " " + y + " " + z);
         		ellipse((int)x, (int)y, 1, 1);
       	}
   		}
